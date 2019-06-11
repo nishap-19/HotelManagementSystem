@@ -35,45 +35,7 @@ public class HotelMainLauncher extends Application{
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		createFiles();
 		// create a AirlineReservation object and call its start method
 		launch(args);
-	}
-
-	static void createFiles() throws FileNotFoundException {
-		File flightFile = new File(System.getProperty("user.dir") + "/flights.txt");
-		
-		// if file doesn't exists, then create it
-		if (!flightFile.exists()) {
-			try {
-				flightFile.createNewFile();
-				Formatter output = new Formatter(flightFile);
-				output.format("%-10s %-10s %-10s %-10s %-15s %-13s %s", "Flight#", "FDate", "DTime", "ATime", "DepartCity", "DestCity", "AvailableSeats");
-				output.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		
-		File reservationFile = new File(System.getProperty("user.dir") + "/reservations.txt");
-		
-		// if file doesn't exists, then create it
-		if (!reservationFile.exists()) {
-			try {
-				reservationFile.createNewFile();
-				Formatter output = new Formatter(reservationFile);
-				output.format("%-5s %-8s %-13s %s%n", "ID", "Name", "SeatNumber", "Flights");
-				output.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		
-		File folder = new File(System.getProperty("user.dir") + "/Flight Seat Maps/");
-		
-		// if folder doesn't exists, then create it
-		if (!folder.exists()) {
-			folder.mkdirs();
-		}
 	}
 }
