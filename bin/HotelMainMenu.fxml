@@ -21,14 +21,6 @@
          </VBox.margin>
       </Label>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#newFlight" prefHeight="80.0" prefWidth="105.0" text="Add New Flight" textAlignment="CENTER" />
-            <Button mnemonicParsing="false" onAction="#newReservation" prefHeight="80.0" prefWidth="105.0" text="Make New Reservation" textAlignment="CENTER" wrapText="true" />
-            <Button mnemonicParsing="false" onAction="#displaySeatMaps" prefHeight="80.0" prefWidth="105.0" text="Display Passenger Seat Maps" textAlignment="CENTER" wrapText="true" />
-            <Button mnemonicParsing="false" onAction="#listAllFlights" prefHeight="80.0" prefWidth="105.0" text="List All Flights" textAlignment="CENTER" />
-            <Button mnemonicParsing="false" onAction="#listAllReservations" prefHeight="80.0" prefWidth="105.0" text="List Passenger Reservations For All Flights" textAlignment="CENTER" wrapText="true" />
-            <Button mnemonicParsing="false" onAction="#listSpecificResearvation" prefHeight="80.0" prefWidth="105.0" text="List Passenger Reservations For Specific Flight" textAlignment="CENTER" wrapText="true" />
-         </children>
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>

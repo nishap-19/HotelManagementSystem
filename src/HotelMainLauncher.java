@@ -1,8 +1,8 @@
-/* Name: Nisha Patel
+/* Name: Nisha Patel, Brandon Thompson, Colin Castlewitz
  * Project Due: April 19
- * Project Name: Airline Reservation System Assignment
- * Instructor: Topsakal
- * Course: COP3330C.03
+ * Project Name: Hotel Management System
+ * Instructor: Elish
+ * Course: CEN4010.01
  */
 
 import java.io.File;
