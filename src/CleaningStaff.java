@@ -2,11 +2,12 @@ import java.util.ArrayList;
 
 public class CleaningStaff {
 	
-	private Employee e = new Employee("Cleaning Staff");
+	private Employee e;
 	private String responsibilities = "Manage all room cleaning requests";
 	private ArrayList<CleaningLog> cleaningRequests;
 	
-	CleaningStaff(){	
+	CleaningStaff(String name, String username, String password, String email, int phone){	
+		e = new Employee("Cleaning Staff", name, username, password, email, phone);	
 	}
 	
 	public String getResponsibilities() {
@@ -14,6 +15,8 @@ public class CleaningStaff {
 	}
 	
 	public ArrayList<CleaningLog> getServiceRequests(){
+		
+		
 		return cleaningRequests;
 	}
 	

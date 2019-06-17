@@ -2,22 +2,28 @@
 public class User {
 	
 	private String name;
-	private String address;
+	private String email;
 	private int phoneNumber;
 	private String username;
 	private String password;
 	private String typeOfUser;
 	
-	User(String type){	
+	User(String type, String inputName, String inputUsername, String inputPassword, String inputEmail, int inputPhone){	
 		typeOfUser = type;
+		name = inputName;
+		username = inputUsername;
+		password = inputPassword;
+		email = inputEmail;
+		phoneNumber = inputPhone;
+		
 	}
 	
 	public String getName() {
 		return name;
 	}
 	
-	public String getAddress() {
-		return address;
+	public String getEmail() {
+		return email;
 	}
 	
 	public int getPhone() {
@@ -40,8 +46,8 @@ public class User {
 		name = n;
 	}
 	
-	public void updateAddress(String s) {
-		address = s;
+	public void updateEmail(String e) {
+		email = e;
 	}
 	
 	public void updatePhone(int n) {

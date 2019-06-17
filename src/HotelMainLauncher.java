@@ -35,7 +35,73 @@ public class HotelMainLauncher extends Application{
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		// create a AirlineReservation object and call its start method
+		createFiles();
+		// create a HotelMainMenu object and call its start method
 		launch(args);
+	}
+	
+	static void createFiles() throws FileNotFoundException {
+		File flightFile = new File(System.getProperty("user.dir") + "/ServiceLog.txt");
+		
+		// if file doesn't exists, then create it
+		if (!flightFile.exists()) {
+			try {
+				flightFile.createNewFile();
+				Formatter output = new Formatter(flightFile);
+				output.format("%-10s %-10s %-10s %-10s %s", "DateAdd", "RoomNum", "RoomType", "Request", "DateCompleted");
+				output.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		File reservationFile = new File(System.getProperty("user.dir") + "/CleaningLog.txt");
+		
+		// if file doesn't exists, then create it
+		if (!reservationFile.exists()) {
+			try {
+				reservationFile.createNewFile();
+				Formatter output = new Formatter(reservationFile);
+				output.format("%-10s %-10s %-10s %s", "DateAdd", "RoomNum", "RoomType", "DateComplete");
+				output.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		File guestFile = new File(System.getProperty("user.dir") + "/guests.txt");
+		
+		// if file doesn't exists, then create it
+		if (!guestFile.exists()) {
+			try {
+				guestFile.createNewFile();
+				Formatter output = new Formatter(guestFile);
+				output.format("%-10s %-10s %-10s %-10s %s%n", "Name", "Username", "Password", "Email", "Phone");
+				output.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		File employeeFile = new File(System.getProperty("user.dir") + "/employees.txt");
+		
+		// if file doesn't exists, then create it
+		if (!employeeFile.exists()) {
+			try {
+				employeeFile.createNewFile();
+				Formatter output = new Formatter(employeeFile);
+				output.format("%-10s %-10s %-10s %-10s %-10s %s%n", "Name", "Role", "Username", "Password", "Email", "Phone");
+				output.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+//		File folder = new File(System.getProperty("user.dir") + "/Reservations/");
+//		
+//		// if folder doesn't exists, then create it
+//		if (!folder.exists()) {
+//			folder.mkdirs();
+//		}
 	}
 }
