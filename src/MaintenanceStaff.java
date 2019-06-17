@@ -2,11 +2,12 @@ import java.util.ArrayList;
 
 public class MaintenanceStaff {
 
-	private Employee e = new Employee("Maintenance Staff");
+	private Employee e;
 	private String responsibilities = "Manage all maintenance service requests from guests and other employees";
 	private ArrayList<ServiceLog> serviceRequests;
 	
-	MaintenanceStaff(){	
+	MaintenanceStaff(String name, String username, String password, String email, int phone){	
+		e = new Employee("Maintenance Staff", name, username, password, email, phone);
 	}
 	
 	public String getResponsibilities() {

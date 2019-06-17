@@ -3,7 +3,7 @@ public class Room {
 
 	private int roomNumber;
 	private String roomType;
-	private boolean roomReserved = false;
+	private boolean roomAvailable = true;
 	private boolean roomClean = true;
 	
 	Room(int num, String type){
@@ -12,11 +12,19 @@ public class Room {
 	}
 	
 	public void bookRoom() {
-		roomReserved = true;
+		roomAvailable = false;
 	}
 	
 	public void releaseRoom() {
-		roomReserved = false;
+		roomAvailable = true;
+	}
+	
+	public void needCleaning() {
+		roomClean = false;
+	}
+	
+	public void roomCleaned() {
+		roomClean = true;
 	}
 	
 	public int getRoomNumber() {
@@ -27,10 +35,11 @@ public class Room {
 		return roomType;
 	}
 	
-	public String getCleaningStatus() {
-		if(roomClean)
-			return "Room is clean";
-		else
-			return "Room needs to be cleaned";
+	public boolean getCleaningStatus() {
+		return roomClean;
+	}
+	
+	public boolean reservationStatus() {
+		return roomAvailable;
 	}
 }
