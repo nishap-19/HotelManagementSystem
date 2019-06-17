@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignIn">
    <children>
       <BorderPane prefHeight="366.4" prefWidth="392.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -35,7 +35,7 @@
                         <Insets left="30.0" top="20.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField promptText="Enter username here">
+                  <TextField fx:id="usernameTextField" promptText="Enter username here">
                      <VBox.margin>
                         <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
                      </VBox.margin>
@@ -51,7 +51,7 @@
                         <Insets bottom="5.0" left="30.0" top="15.0" />
                      </VBox.margin>
                   </Label>
-                  <PasswordField promptText="Enter password here">
+                  <PasswordField fx:id="passwordTextField" promptText="Enter password here">
                      <VBox.margin>
                         <Insets bottom="10.0" left="30.0" right="30.0" />
                      </VBox.margin>
@@ -61,12 +61,12 @@
                   </PasswordField>
                   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Login">
+                        <Button mnemonicParsing="false" onAction="#login" text="Login">
                            <HBox.margin>
                               <Insets right="30.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Cancel" />
+                        <Button mnemonicParsing="false" onAction="#returnToHome" text="Cancel" />
                      </children>
                      <padding>
                         <Insets top="15.0" />
@@ -78,12 +78,12 @@
          <bottom>
             <HBox alignment="CENTER" prefHeight="60.0" prefWidth="392.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" text="Proceed Without Login">
+                  <Button mnemonicParsing="false" onAction="#proceedWithoutLogin" text="Proceed Without Login">
                      <HBox.margin>
                         <Insets right="30.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="New User" />
+                  <Button mnemonicParsing="false" onAction="#newUser" text="New User" />
                </children>
                <BorderPane.margin>
                   <Insets />

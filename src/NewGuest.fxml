@@ -12,8 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="448.0" prefWidth="520.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1">
+<AnchorPane prefHeight="448.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewGuest">
    <children>
       <TitledPane animated="false" collapsible="false" layoutX="46.0" layoutY="66.0" prefHeight="448.0" prefWidth="520.0" text="Join the Club!" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <content>
@@ -30,7 +29,7 @@
                               </Label>
                               <HBox alignment="CENTER" prefHeight="37.0" prefWidth="496.0">
                                  <children>
-                                    <TextField prefHeight="26.0" prefWidth="200.0" promptText="First">
+                                    <TextField fx:id="firstNameTextField" prefHeight="26.0" prefWidth="200.0" promptText="First">
                                        <HBox.margin>
                                           <Insets left="10.0" />
                                        </HBox.margin>
@@ -38,7 +37,7 @@
                                           <Font name="System Italic" size="12.0" />
                                        </font>
                                     </TextField>
-                                    <TextField prefHeight="26.0" prefWidth="200.0" promptText="Last">
+                                    <TextField fx:id="lastNameTestField" prefHeight="26.0" prefWidth="200.0" promptText="Last">
                                        <HBox.margin>
                                           <Insets left="15.0" />
                                        </HBox.margin>
@@ -53,7 +52,7 @@
                                     <Insets left="47.0" top="15.0" />
                                  </VBox.margin>
                               </Label>
-                              <TextField promptText="(XXX) XXX-XXXX">
+                              <TextField fx:id="phoneTextField" promptText="(XXX) XXX-XXXX">
                                  <font>
                                     <Font name="System Italic" size="12.0" />
                                  </font>
@@ -66,7 +65,7 @@
                                     <Insets left="47.0" top="20.0" />
                                  </VBox.margin>
                               </Label>
-                              <TextField promptText="example@email.com">
+                              <TextField fx:id="emailTextField" promptText="example@email.com">
                                  <font>
                                     <Font name="System Italic" size="12.0" />
                                  </font>
@@ -79,7 +78,7 @@
                                     <Insets left="47.0" top="20.0" />
                                  </VBox.margin>
                               </Label>
-                              <TextField prefHeight="27.0" prefWidth="200.0" promptText="user">
+                              <TextField fx:id="usernameTextField" prefHeight="27.0" prefWidth="200.0" promptText="user">
                                  <VBox.margin>
                                     <Insets left="47.0" right="250.0" top="5.0" />
                                  </VBox.margin>
@@ -92,7 +91,7 @@
                                     <Insets left="47.0" top="20.0" />
                                  </VBox.margin>
                               </Label>
-                              <PasswordField promptText="********">
+                              <PasswordField fx:id="passwordTextField" promptText="********">
                                  <VBox.margin>
                                     <Insets bottom="15.0" left="47.0" right="250.0" top="5.0" />
                                  </VBox.margin>
@@ -102,12 +101,12 @@
                               </PasswordField>
                               <HBox alignment="CENTER" prefHeight="47.0" prefWidth="496.0">
                                  <children>
-                                    <Button alignment="TOP_CENTER" mnemonicParsing="false" text="Complete">
+                                    <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#createAccount" text="Complete">
                                        <HBox.margin>
                                           <Insets right="50.0" />
                                        </HBox.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" text="Cancel">
+                                    <Button mnemonicParsing="false" onAction="#returnToHome" text="Cancel">
                                        <HBox.margin>
                                           <Insets left="50.0" />
                                        </HBox.margin>
