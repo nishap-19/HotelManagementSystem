@@ -68,7 +68,7 @@ public class HotelDataAccess {
 			Formatter output = new Formatter(roomFile);
 			
 			//writes header to file
-			output.format("%-10s %-10s %-10s %-10s n", "Room##", "RoomType", "RoomReserved", "RoomCleaned");
+			output.format("%-10s %-10s %-10s %-10s n", "Room#", "RoomType", "RoomReserved", "RoomCleaned");
 			
 			//writes all rooms from rooms array to file
 			for(int i = 0; i < rooms.size(); i++) {
