@@ -3,12 +3,14 @@ public class User {
 	
 	private String name;
 	private String email;
-	private int phoneNumber;
+	private String phoneNumber;
 	private String username;
 	private String password;
 	private String typeOfUser;
 	
-	User(String type, String inputName, String inputUsername, String inputPassword, String inputEmail, int inputPhone){	
+	User(){	}
+	
+	User(String type, String inputName, String inputUsername, String inputPassword, String inputEmail, String inputPhone){	
 		typeOfUser = type;
 		name = inputName;
 		username = inputUsername;
@@ -26,7 +28,7 @@ public class User {
 		return email;
 	}
 	
-	public int getPhone() {
+	public String getPhone() {
 		return phoneNumber;
 	}
 	
@@ -50,7 +52,7 @@ public class User {
 		email = e;
 	}
 	
-	public void updatePhone(int n) {
+	public void updatePhone(String n) {
 		phoneNumber = n;
 	}
 	

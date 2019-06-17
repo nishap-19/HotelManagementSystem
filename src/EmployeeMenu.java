@@ -8,7 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class GuestMenu {
+public class EmployeeMenu {
     @FXML
     void returnToHome(ActionEvent event) throws IOException {
 		Parent parent =
