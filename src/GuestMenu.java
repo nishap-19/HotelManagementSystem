@@ -9,7 +9,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class GuestMenu {
-    @FXML
+
+	@FXML
     void returnToHome(ActionEvent event) throws IOException {
 		Parent parent =
 				FXMLLoader.load(getClass().getResource("HotelMainMenu.fxml"));

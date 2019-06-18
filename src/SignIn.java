@@ -91,6 +91,7 @@ public class SignIn {
 			confirm.setContentText("Invalid Login Credentials!");
 			confirm.setHeaderText(null);
 			confirm.showAndWait();
+			return;
     	}
     }
 
