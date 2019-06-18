@@ -22,7 +22,7 @@ public class HotelMainMenu {
 
 			Scene seat_map_scene = new Scene(seat_map_parent);
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();   	    
-			stage.setTitle(""); // displayed in window's title bar
+			stage.setTitle(" "); // displayed in window's title bar
 			stage.setScene(seat_map_scene); // attach scene to stage
 			stage.show(); // display the stage
 			

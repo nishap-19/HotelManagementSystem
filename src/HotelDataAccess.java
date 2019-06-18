@@ -100,8 +100,7 @@ public class HotelDataAccess {
 			Scanner employeeFile = new Scanner(new File(System.getProperty("user.dir") + "/employees.txt"));
 			Scanner dataScan;	//Scanner object to scan each line of the file
 			String data;	//Scanner object to scan each data item in the line given
-			String name, role, username, password, email;
-			int phone;
+			String name, role, username, password, email, phone;
 
 			employeeFile.nextLine();	//skips the header line of the file
 
@@ -114,10 +113,12 @@ public class HotelDataAccess {
 				//scans in all data items and sets to variables
 				name = dataScan.next() + " " + dataScan.next();
 				role = dataScan.next();
+				if(!role.equals("Manager"))
+					role = role + " " + dataScan.next();
 				username = dataScan.next();
 				password = dataScan.next();
 				email = dataScan.next();
-				phone = dataScan.nextInt();
+				phone = dataScan.next();
 
 				//Create Employee object
 				Employee e = new Employee(role, name, username, password, email, phone);
@@ -170,8 +171,7 @@ public class HotelDataAccess {
 			Scanner guestFile = new Scanner(new File(System.getProperty("user.dir") + "/guests.txt"));
 			Scanner dataScan;	//Scanner object to scan each line of the file
 			String data;	//Scanner object to scan each data item in the line given
-			String name, username, password, email;
-			int phone;
+			String name, username, password, email, phone;
 
 			guestFile.nextLine();	//skips the header line of the file
 
@@ -186,7 +186,7 @@ public class HotelDataAccess {
 				username = dataScan.next();
 				password = dataScan.next();
 				email = dataScan.next();
-				phone = dataScan.nextInt();
+				phone = dataScan.next();
 
 				//Create Guest object
 				Guest g = new Guest(name, username, password, email, phone);

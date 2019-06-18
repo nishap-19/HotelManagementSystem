@@ -1,0 +1,3 @@
+Name       Role       Username   Password   Email      Phone
+Lyra Hall Desk Clerk lhall4568 wy7bw2 lhall4568@hm.com 7023556535
+Kris Woods Manager kwoods3684 b489fr kwoods3684@hm.com 7026597815

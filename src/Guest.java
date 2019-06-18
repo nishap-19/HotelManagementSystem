@@ -5,7 +5,7 @@ public class Guest {
 	private User guest;
 	private int numberOfVisits = 0;
 	
-	Guest(String name, String username, String password, String email, int phone){	
+	Guest(String name, String username, String password, String email, String phone){	
 		guest = new User("Guest", name, username, password, email, phone);	
 	}
 	

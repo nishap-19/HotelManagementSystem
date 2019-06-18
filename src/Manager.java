@@ -5,7 +5,7 @@ public class Manager {
 	private Employee e;
 	private ArrayList<Employee> employees;
 	
-	Manager(String name, String username, String password, String email, int phone){	
+	Manager(String name, String username, String password, String email, String phone){	
 		e = new Employee("Manager", name, username, password, email, phone);
 	}
 	

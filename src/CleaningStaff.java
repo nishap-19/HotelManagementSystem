@@ -6,7 +6,7 @@ public class CleaningStaff {
 	private String responsibilities = "Manage all room cleaning requests";
 	private ArrayList<CleaningLog> cleaningRequests;
 	
-	CleaningStaff(String name, String username, String password, String email, int phone){	
+	CleaningStaff(String name, String username, String password, String email, String phone){	
 		e = new Employee("Cleaning Staff", name, username, password, email, phone);	
 	}
 	

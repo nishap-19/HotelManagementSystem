@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EmployeeMenu">
+   <children>
+      <Label text="Employee Home Page">
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="273.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="375.0" prefWidth="170.0" spacing="10.0">
+               <children>
+                  <Label text="Reservations">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#roomReservation" prefHeight="60.0" prefWidth="100.0" text="Make Room Reservation" textAlignment="CENTER" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#reserveConferenceRoom" prefHeight="60.0" prefWidth="100.0" text="Reserve Conference Room" textAlignment="CENTER" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#viewReservations" prefHeight="60.0" prefWidth="100.0" text="View Reservations" textAlignment="CENTER" wrapText="true" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox alignment="TOP_CENTER" prefHeight="375.0" prefWidth="170.0" spacing="10.0">
+               <children>
+                  <Label text="Cleaning Services">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#viewCleaningLog" prefHeight="60.0" prefWidth="100.0" text="View Cleaning Log" textAlignment="CENTER" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#cleaningHelp" prefHeight="60.0" prefWidth="100.0" text="Review Cleaning Procedure" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox alignment="TOP_CENTER" prefHeight="375.0" prefWidth="170.0" spacing="10.0">
+               <children>
+                  <Label text="Maintenance Services">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#viewServiceLog" prefHeight="60.0" prefWidth="100.0" text="View Service Log" textAlignment="CENTER" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#maintenanceHelp" prefHeight="60.0" prefWidth="100.0" text="Review Maintenance Protocols" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="590.0" spacing="5.0">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+         <children>
+            <Label text="Manager Access: " />
+            <Button mnemonicParsing="false" onAction="#viewEmployeeData" text="Employee Data" />
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#returnToHome" text="Exit" />
+   </children>
+</VBox>
